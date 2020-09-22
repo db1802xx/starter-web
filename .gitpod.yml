@@ -3,7 +3,8 @@ image:
 
 tasks:
   - init: 'yarn install'
-    command: 'yarn start'
-
+  - command: |
+      echo JWT_SECRET=$JWT_SECRET >> .env
+      yarn start
 ports:
   - port: 9000
