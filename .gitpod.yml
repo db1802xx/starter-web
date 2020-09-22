@@ -3,7 +3,7 @@ image:
 
 tasks:
   - init: 'yarn install'
-  - command: |
+    command: |
       echo JWT_SECRET=$JWT_SECRET >> .env
       cat .env
       yarn start
