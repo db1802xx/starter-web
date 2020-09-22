@@ -9,8 +9,7 @@ FROM ubuntu:focal
 
 RUN apt-get update && apt-get -y upgrade && apt-get autoremove
 
-RUN apt-get install -y nodejs \
+RUN apt-get install -y nodejs npm yarn \
     && node --version
 
 CMD [ "bash" ]
-    
