@@ -5,6 +5,10 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
+require('dotenv').config();
+console.log('ENV:');
+console.log(process.env);
+
 // const queries = require('./db/queries');
 const routes = require('./routes/index');
 
