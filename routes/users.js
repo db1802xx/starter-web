@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const queries = require('../db/queries');
 
-router.get('/', (req, res, next) => {
-  queries.getUsers().then(users => {
+const User = require('../models/User');
+
+router.get('/', (req, res) => {
+  User.query().then(users => {
     res.json(users);
   });
 });

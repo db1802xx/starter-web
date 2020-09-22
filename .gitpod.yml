@@ -4,8 +4,10 @@ image:
 tasks:
   - init: 'yarn install'
     command: |
+      echo ENVIRONMENT=$NODE_ENV >> .env
       echo JWT_SECRET=$JWT_SECRET >> .env
-      cat .env
+      echo PORT=$PORT >> .env
+      yarn db_init
       yarn start
 ports:
   - port: 9000

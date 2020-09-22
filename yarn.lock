@@ -32,7 +32,7 @@ accepts@~1.3.7:
     mime-types "~2.1.24"
     negotiator "0.6.2"
 
-ajv@^6.12.3:
+ajv@^6.12.0, ajv@^6.12.3:
   version "6.12.5"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.5.tgz#19b0e8bae8f476e5ba666300387775fb1a00a4da"
   integrity sha512-lRF8RORchjpKG50/WFf8xmg7sgCLFiYNNnqdKflk63whMQcWR5ngGjiSXkL9bjxy6B2npOK2HSMN49jEBMSkag==
@@ -499,6 +499,11 @@ dashdash@^1.12.0:
   integrity sha1-hTz6D3y+L+1d4gMmuN1YEDX24vA=
   dependencies:
     assert-plus "^1.0.0"
+
+db-errors@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/db-errors/-/db-errors-0.2.3.tgz#a6a38952e00b20e790f2695a6446b3c65497ffa2"
+  integrity sha512-OOgqgDuCavHXjYSJoV2yGhv6SeG8nk42aoCSoyXLZUH7VwFG27rxbavU1z+VrZbZjphw5UkDQwUlD21MwZpUng==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
   version "2.6.9"
@@ -1964,6 +1969,14 @@ object.pick@^1.2.0, object.pick@^1.3.0:
   integrity sha1-h6EKxMFpS9Lhy/U1kaZhQftd10c=
   dependencies:
     isobject "^3.0.1"
+
+objection@^2.2.3:
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/objection/-/objection-2.2.3.tgz#7509620b75a6907227cfb6a3fc4135222bb2e749"
+  integrity sha512-uNya9GuHlNeix7H0URthVE3+CmAlXmxkU69LAcRnncLjujJ8l1YX8JCB2GVSErTYS3Oc2xneF1ZWaR/MS8r63g==
+  dependencies:
+    ajv "^6.12.0"
+    db-errors "^0.2.3"
 
 on-finished@~2.3.0:
   version "2.3.0"
