@@ -20,3 +20,4 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 RUN apt-get update && apt-get install --no-install-recommends yarn
 
 CMD [ "bash" ]
+# CMD [ "yarn install", "yarn start" ]
