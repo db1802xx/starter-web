@@ -7,6 +7,8 @@ FROM ubuntu:focal
 #
 # More information: https://www.gitpod.io/docs/config-docker/
 
+ARG DEBIAN_FRONTEND=noninteractive
+
 RUN apt-get update && apt-get -y upgrade && apt-get autoremove
 
 RUN apt-get install -y nodejs npm yarnpkg \
