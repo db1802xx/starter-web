@@ -1,18 +1,65 @@
 <!doctype html>
 <html>
-<body>
-  <ul>
-    <li><a href="users">users</a></li>
-  </ul>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <button onclick="login()">Login</button>
-  <pre id="login_debug"></pre>
+  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
 
-  <hr>
+  <title>?</title>
+  <style>
+    main > .container {
+      /* padding: 60px 15px 0; */
+      padding-top: 75px;
+    }
+  </style>
+</head>
+<body class="d-flex flex-column h-100">
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">
+        <i class="fab fa-rebel"></i>
+      </a>
 
-  <button onclick="verify()">Verify JWT</button>
-  <pre id="verify_debug"></pre>
+      <div>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a href="users" class="nav-link">Users</a>
+          </li>
+          <li class="nav-item">
+            <a href="items" class="nav-link">Items</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
+  <main role="main" class="flex-shrink-0">
+    <div class="container">
+      <!--
+      <div class="row">
+        <div class="col-12">
+          <ul>
+            <li><a href="users">users</a></li>
+            <li><a href="items">items</a></li>
+          </ul>
+        </div>
+      </div>
+      -->
+
+      <button class="btn btn-secondary" onclick="login()">Login</button>
+      <pre id="login_debug"></pre>
+
+      <hr>
+
+      <button class="btn btn-secondary" onclick="verify()">Verify JWT</button>
+      <pre id="verify_debug"></pre>
+    </div>
+  </main>
+
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="index.js"></script>
 </body>
 </html>

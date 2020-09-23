@@ -9,8 +9,16 @@ class User extends Model {
   }
 
   static get relationMappings() {
+    const Item = require('./Item');
     return {
-      children: {}
+      items: {
+        relation: Model.HasManyRelation,
+        modelClass: Item,
+        join: {
+          from: 'users.id',
+          to: 'items.user_id'
+        }
+      }
     }
   }
 }
