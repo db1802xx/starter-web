@@ -2,5 +2,12 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: 'echo "TODO: Replace with init/build command"'
-    command: 'echo "TODO: Replace with command to start project"'
+  - init: 'yarn install'
+    command: |
+      echo ENVIRONMENT=$NODE_ENV >> .env
+      echo JWT_SECRET=$JWT_SECRET >> .env
+      echo PORT=$PORT >> .env
+      yarn db_init
+      yarn start
+ports:
+  - port: 9000
